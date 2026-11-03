@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  @font-face {
+    font-family: 'TH Sarabun PSK';
+    src: local('TH Sarabun PSK'), local('THSarabunPSK'), local('TH Sarabun New');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'TH Sarabun PSK';
+    src: local('TH Sarabun PSK Bold'), local('THSarabunPSK-Bold'), local('TH Sarabun New Bold');
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+.font-sarabun {
+  font-family: 'TH Sarabun PSK', 'THSarabunPSK', 'TH Sarabun New', 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Print specific styles */
+@media print {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  #screen-app {
+    display: none !important;
+  }
+
+  #print-area {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'TH Sarabun PSK', 'THSarabunPSK', 'TH Sarabun New', 'Sarabun', sans-serif !important;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+  }
+
+  .print-page {
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+  }
+
+  .print-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+}
+
+@media screen {
+  #print-area {
+    display: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ระบบพิมพ์ซองจดหมายราชการและเอกสาร (Official Envelope & Mail Print)",
+  "description": "ระบบพิมพ์ซองจดหมายราชการ 10.8x23.5 ซม. และ A4 ฟอนต์ TH Sarabun PSK 22pt เว้นที่ว่างตราครุฑ รองรับ Google Sheets และฐานข้อมูล สพท. 247 แห่ง",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
